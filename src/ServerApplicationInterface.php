@@ -4,7 +4,7 @@ namespace Thruster\Component\ServerApplication;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Thruster\Component\Promise\PromiseInterface;
+use Thruster\Component\Promise\ExtendedPromiseInterface;
 
 /**
  * Interface ServerApplicationInterface
@@ -19,9 +19,9 @@ interface ServerApplicationInterface
     /**
      * @param ServerRequestInterface $request
      *
-     * @return PromiseInterface A promise which will return ResponseInterface
+     * @return ExtendedPromiseInterface A promise which will return ResponseInterface
      */
-    public function processRequest(ServerRequestInterface $request) : PromiseInterface;
+    public function processRequest(ServerRequestInterface $request) : ExtendedPromiseInterface;
 
     /**
      * @param array $headers
